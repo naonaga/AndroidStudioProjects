@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             binding.imageSwitcher.setInAnimation(this, android.R.anim.slide_in_left)
             binding.imageSwitcher.setOutAnimation(this, android.R.anim.slide_out_right)
             movePosition(1) }
-        timer(period = 5000) {
+        timer(period = 2000) {
             handler.post {
                 if (isSlideshow) movePosition(1)
             }

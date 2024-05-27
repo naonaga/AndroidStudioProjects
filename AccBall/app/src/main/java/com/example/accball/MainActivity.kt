@@ -13,7 +13,6 @@ import android.os.Bundle
 import android.view.SurfaceHolder
 
 import com.example.accball.databinding.ActivityMainBinding
-private lateinit var binding: ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), SensorEventListener
     , SurfaceHolder.Callback {
@@ -28,6 +27,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener
         private var vx: Float = 0f // ボールのx方向への加速度
         private var vy: Float = 0f // ボールのy方向への加速度
         private var time: Long = 0L //前回時間の保持
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
